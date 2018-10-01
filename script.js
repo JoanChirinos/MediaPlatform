@@ -17,6 +17,6 @@ function create_account() {
         return;
     }
 
-    create_account_request.open("GET", 'https://homer.stuy.edu/~jchirinos/MediaPlatform/data/create_account.py?username=' + username + '&password=' + password);
+    create_account_request.open("GET", 'http://homer.stuy.edu/~jchirinos/MediaPlatform/data/create_account.py?username=' + username + '&password=' + password);
     create_account_request.send();
 }
