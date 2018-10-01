@@ -7,3 +7,7 @@ function welcome() {
         window.location.href = 'http://homer.stuy.edu/~jchirinos/MediaPlatform/login.html';
     }
 }
+
+function logout() {
+    Cookies.remove('username');
+}
