@@ -1,7 +1,5 @@
 #! /usr/bin/python3
 
-# Unfortunately, this assumes that nobody has the same name xD
-
 import cgi, cgitb
 cgitb.enable()
 
@@ -14,6 +12,8 @@ def make_dict():
     
     account_dict = {}
     for i in accounts.split('\n'):
+        if i == '':
+            break
         account_details = i.split('|', 2)
         account_dict[account_details[0]] = account_details[1] #username: password
     
@@ -26,7 +26,9 @@ def go():
     
     d = make_dict()
     
-    if d[username] = password:
+    if d[username] == password:
         return '1' #login complete!
     else:
         return '0' #wrong password
+
+go()
