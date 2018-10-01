@@ -5,6 +5,8 @@
 import cgi, cgitb
 cgitb.enable()
 
+print('Content-type: text/html\n\n')
+
 def make_dict():
     straw = open('accounts.txt', 'r')
     accounts = straw.read()
@@ -28,14 +30,13 @@ def create_account(username, password):
     
 def go():
     fs = cgi.FieldStorage()
-    username = fs.getvalue('username', 'NONE')
+    username = fs.getvalue('username')
     password = fs.getvalue('password')
     
-    if username == 'NONE':
-        return 'invalid username'
-    elif not account_exists(username):
+    if not account_exists(username):
         create_account(username, password)
+        print('1') # ACCOUNT CREATION COMPLETED
     else:
-        return 'Account already exists!'
+        print('0') # USERNAME EXISTS
 
 go()
