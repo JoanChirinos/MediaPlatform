@@ -27,8 +27,8 @@ def go():
     d = make_dict()
     
     if d[username] == password:
-        print '1' #login complete!
+        print('1') #login complete!
     else:
-        print '0' #wrong password
+        print('0') #wrong password
 
 go()
