@@ -5,17 +5,19 @@ var create_account_request = new XMLHttpRequest();
 create_account_request.onload = function () {
     var return_val = create_account_request.responseText;
     console.log(return_val);
-    if (return_val == '0') {
+    if (return_val == 0) {
         console.log('username exists');
         error.innerHTML = 'That username already exists!';
         return;
     }
     // if new account created
-    else if (return_val == '1') {
+    else if (return_val == 1) {
         console.log('account created');
         error.innerHTML = 'Account created! Please log in!';
         document.getElementById('password').value = '';
         return;
+    } else {
+        console.log('why isnt this working?');
     }
 }
 
