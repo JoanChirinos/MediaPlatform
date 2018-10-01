@@ -14,6 +14,8 @@ def make_dict():
     
     account_dict = {}
     for i in accounts.split('\n'):
+        if i == '':
+            break
         account_details = i.split('|', 2)
         account_dict[account_details[0]] = account_details[1] #username: password
     
