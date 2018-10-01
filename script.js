@@ -17,10 +17,6 @@ function create_account() {
         return;
     }
 
-    create_account_request.open("GET", 'https://joanchirinos.github.io/MediaPlatform/data/create_account.py?username=' + username + '&password=' + password);
+    create_account_request.open("GET", 'https://homer.stuy.edu/~jchirinos/MediaPlatform/data/create_account.py?username=' + username + '&password=' + password);
     create_account_request.send();
 }
-
-
-text.open("GET", "http://homer.stuy.edu/~jchirinos/Jakinator/qa.txt?t=" + Math.random(), true);
-text.send();
