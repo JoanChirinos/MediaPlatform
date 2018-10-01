@@ -11,7 +11,7 @@ create_account_request.onload = function () {
     }
     // if new account created
     else if (return_val == '1') {
-        error.innerHTML = 'Account created! Please log in!'
+        error.innerHTML = 'Account created! Please log in!';
         document.getElementById('password').value = '';
     }
 }
