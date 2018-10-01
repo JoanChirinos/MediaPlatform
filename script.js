@@ -1,7 +1,7 @@
 var create_account_request = new XMLHttpRequest();
 
 create_account_request.onload = function () {
-    var return_val = create_account_request.responseText();
+    var return_val = create_account_request.responseText;
     console.log(return_val);
 }
 
